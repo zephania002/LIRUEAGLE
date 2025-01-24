@@ -4,77 +4,208 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LIRU MASINDE</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/Blog.css">
-</head>
-<body>
+    <style>
+        .dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
 
-    <!-- Header -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <!-- <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li> -->
+        .dark-mode .card {
+            background-color: #1e1e1e;
+            border-color: #333;
+        }
+
+        .dark-mode .comment {
+            background-color: #2a2a2a;
+        }
+
+        .dark-mode .sidebar {
+            background-color: #1e1e1e;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' linecap='round' linejoin='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+
+        .custom-control-label::before {
+            background-color: #6c757d;
+        }
+
+        .custom-control-input:checked ~ .custom-control-label::before {
+            background-color: #007bff;
+        }
+    </style>
+</head>
+<body onload="loadComments()">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">LIRU MASINDE</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="nav-item">
+                    <div class="custom-control custom-switch mt-2">
+                        <input type="checkbox" class="custom-control-input" id="dark-mode-toggle" onclick="toggleDarkMode()">
+                        <label class="custom-control-label" for="dark-mode-toggle">Dark Mode</label>
+                    </div>
+                </li>
             </ul>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
     <!-- Blog Content -->
-    <div class="blog-container">
-        <!-- Blog Post 1 -->
-        <div class="blog-post">
-            <h2>My Latest Blogs</h2>
-            <div class="post-content">
-                <img src="images/profile_11.png" alt="Modern Design Trends" class="post-image">
-                <p>This year has seen the rise of bold colors, minimalistic designs and more user-centric.</p>
-            </div>
-
-            <!-- Comments Section -->
-            <div class="comments">
-                <h3>Comments</h3>
-                <div class="comment">
-                    <p><strong>Liru Masinde:</strong> With my work mate who became family.</p>
-                </div>
-                <div class="comment">
-                    <p><strong>Zephania:</strong> Great post! I think more color would be exciting too.</p>
+    <div class="content container mt-4">
+        <!-- Blog Post 2-->
+        <div class="blog-post card mb-4">
+            <div class="card-body">
+                <h2 class="card-title">My Latest Blogs</h2>
+                <div class="post-content">
+                    <img src="images/profile_11.png" alt="Modern Design Trends" class="post-image img-fluid rounded">
+                    <p class="card-text">This year has seen the rise of bold colors, minimalistic designs, and more user-centric interfaces.</p>
+                    <button class="like-button btn btn-outline-danger" onclick="toggleLike(this)" data-liked="false"><span class="heart">♥</span> Like</button>
                 </div>
 
-                <!-- Comment Form -->
-                <div class="comment-form">
-                    <input type="text" id="comment-input" placeholder="Add a comment..." />
-                    <button onclick="addComment()">Post Comment</button>
-                </div>
-            </div>
-        </div>
-
-         <!-- Blog Post 2-->
-         <div class="blog-post">
-            <h2></h2>
-            <div class="post-content">
-                <img src="images/profile_17.png" alt="Modern Design Trends" class="post-image">
-                <p>This year has seen the rise of bold colors, minimalistic designs and more user-centric.</p>
-            </div>
-
-            <!-- Comments Section -->
-            <div class="comments">
-                <h3>Comments</h3>
-                <div class="comment">
-                    <p><strong>Daisy Migoya:</strong> Looking lovely guys❤️❤️</p>
-                </div>
-                <div class="comment">
-                    <p><strong>Zadock Omollo:</strong> The end of a great time and the begining a new one👌</p>
+                <!-- Social Media Sharing -->
+                <div class="mt-3">
+                    <span>Share: </span>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=#" target="_blank" class="btn btn-primary btn-sm">Facebook</a>
+                    <a href="https://twitter.com/intent/tweet?url=#" target="_blank" class="btn btn-info btn-sm">X</a>
+                    <a href="https://wa.me/?text=#" target="_blank" class="btn btn-success btn-sm">WhatsApp</a>
                 </div>
 
-                <!-- Comment Form -->
-                <div class="comment-form">
-                    <input type="text" id="comment-input" placeholder="Add a comment..." />
-                    <button onclick="addComment()">Post Comment</button>
+                <!-- Author Profile -->
+                <div class="author-profile mt-4 p-3 bg-light rounded">
+                    <img src="images/profile_1.png" alt="Author" class="rounded-circle mr-3" style="width: 50px; height: 50px;">
+                    <strong>Liru Masinde</strong>
+                    <p class="mb-0">A passionate designer and blogger exploring modern trends.</p>
+                </div>
+
+                <!-- Comments Section -->
+                <div class="comments mt-3">
+                    <h3>Comments</h3>
+                    <div class="comment-list"></div>
+                    <div class="comment-form input-group mt-2">
+                        <input type="text" id="comment-input" class="form-control" placeholder="Add a comment..." />
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" onclick="addComment('comment-input', this)">Post Comment</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- Add More Blog Posts here... -->
+
+        <div class="blog-post card mb-4">
+            <div class="card-body">
+                <h2 class="card-title">My Latest Blogs</h2>
+                <div class="post-content">
+                    <img src="images/profile_11.png" alt="Modern Design Trends" class="post-image img-fluid rounded">
+                    <p class="card-text">This year has seen the rise of bold colors, minimalistic designs, and more user-centric interfaces.</p>
+                    <button class="like-button btn btn-outline-danger" onclick="toggleLike(this)" data-liked="false"><span class="heart">♥</span> Like</button>
+                </div>
+
+                <!-- Social Media Sharing -->
+                <div class="mt-3">
+                    <span>Share: </span>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=#" target="_blank" class="btn btn-primary btn-sm">Facebook</a>
+                    <a href="https://twitter.com/intent/tweet?url=#" target="_blank" class="btn btn-info btn-sm">Twitter</a>
+                    <a href="https://wa.me/?text=#" target="_blank" class="btn btn-success btn-sm">WhatsApp</a>
+                </div>
+
+                <!-- Author Profile -->
+                <div class="author-profile mt-4 p-3 bg-light rounded">
+                    <img src="images/profile_10.png" alt="Author" class="rounded-circle mr-3" style="width: 50px; height: 50px;">
+                    <strong>Liru Masinde</strong>
+                    <p class="mb-0">A passionate designer and blogger exploring modern trends.</p>
+                </div>
+
+                <!-- Comments Section -->
+                <div class="comments mt-3">
+                    <h3>Comments</h3>
+                    <div class="comment-list"></div>
+                    <div class="comment-form input-group mt-2">
+                        <input type="text" id="comment-input" class="form-control" placeholder="Add a comment..." />
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" onclick="addComment('comment-input', this)">Post Comment</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <script src="js/Blog.js"></script>
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Function to toggle dark mode
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+
+        // Function to toggle like button
+        function toggleLike(button) {
+            const isLiked = button.getAttribute('data-liked') === 'true';
+            const heart = button.querySelector('.heart');
+
+            if (isLiked) {
+                button.setAttribute('data-liked', 'false');
+                heart.style.color = '';
+            } else {
+                button.setAttribute('data-liked', 'true');
+                heart.style.color = 'pink';
+            }
+        }
+
+        // Function to add a new comment
+        function addComment(inputId, button) {
+            const commentInput = document.getElementById(inputId);
+            const commentText = commentInput.value.trim();
+
+            if (commentText) {
+                const commentSection = button.closest('.comments').querySelector('.comment-list');
+
+                const newComment = document.createElement('div');
+                newComment.classList.add('comment', 'bg-light', 'p-2', 'rounded', 'mb-2');
+                newComment.innerHTML = `<p><strong>You:</strong> ${commentText}</p>`;
+
+                commentSection.appendChild(newComment);
+
+                // Store comments in localStorage
+                const postKey = `comments-${inputId}`;
+                const storedComments = JSON.parse(localStorage.getItem(postKey)) || [];
+                storedComments.push(commentText);
+                localStorage.setItem(postKey, JSON.stringify(storedComments));
+
+                // Clear input field after posting
+                commentInput.value = '';
+            } else {
+                alert('Please write a comment before posting.');
+            }
+        }
+
+        // Load comments from localStorage
+        function loadComments() {
+            document.querySelectorAll('.comments').forEach((commentSection, index) => {
+                const inputId = `comment-input${index === 0 ? '' : `-${index + 1}`}`;
+                const storedComments = JSON.parse(localStorage.getItem(`comments-${inputId}`)) || [];
+                const commentList = commentSection.querySelector('.comment-list');
+                storedComments.forEach(comment => {
+                    const newComment = document.createElement('div');
+                    newComment.classList.add('comment', 'bg-light', 'p-2', 'rounded', 'mb-2');
+                    newComment.innerHTML = `<p><strong>You:</strong> ${comment}</p>`;
+                    commentList.appendChild(newComment);
+                });
+            });
+        }
+    </script>
 </body>
 </html>
