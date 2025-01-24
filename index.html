@@ -61,31 +61,80 @@
 
         <!-- HOME -->
         <section id="home" class="full-height px-lg-5">
-            <audio id="audioPlayer" controls>
+            <audio id="audioPlayer" controls style="background-color: #fff; border-radius: 10px; padding: 5px;">
                 <source src="assets/videos/audio.mp3" type="audio/mp3">
             </audio>
-
+        
             <div class="background-video">
-                <video  autoplay muted loop>
+                <video autoplay muted loop>
                     <source src="assets/videos/kk.mp4" type="video/mp4">
-                
                 </video>
-                <div class="overlay"></div>
+                <div class="overlay" style="background: rgba(0, 0, 0, 0.5);"></div>
             </div>
+        
             <div class="container">
                 <div class="row">
                     <div class="col-lg-10">
-                        <h1 class="display-4 fw-bold" data-aos="fade-up">WELCOME TO <span class="text-brand">LIRU MASINDE</span> </h1>Your Gateway to Digital Solutions
-                        <p class="lead mt-2 mb-4" data-aos="fade-up" data-aos-delay="300"></p>
+                        <h1 class="display-4 fw-bold" data-aos="fade-up">
+                            <span style="color: #FFD700;">WELCOME TO</span> <span class="text-brand">LIRU MASINDE</span>
+                        </h1>
+                        <p class="lead mt-2 mb-4" data-aos="fade-up" data-aos-delay="300">
+                            <span>Your Gateway to Digital Solutions</span>
+                        </p>
+        
+                        <!-- Enhanced Buttons -->
                         <div data-aos="fade-up" data-aos-delay="600">
-                            <a href="#work" class="btn btn-brand me-3">Explore My Work</a>
-                            <a href="#" class="link-custom">Call: +1 (416) 389-9844</a>
+                            <a href="#work" class="btn btn-brand me-3" style="padding: 10px 20px; font-size: 1.2rem;">Explore My Work</a>
+                            <a href="tel:+14163899844" class="btn btn-outline-light" style="padding: 10px 20px; font-size: 1.2rem;">
+                                Call Us Now: +1 (416) 389-9844
+                            </a>
+                        </div>
+        
+                        <!-- Scroll-down Indicator -->
+                        <div class="scroll-down-indicator" data-aos="fade-up" data-aos-delay="800" style="margin-top: 30px;">
+                            <a href="#work" style="text-decoration: none; color: #FFD700; font-size: 1.5rem;">
+                                <i class="las la-arrow-down"></i> Scroll Down
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-
+        
+            <!-- Feature Highlights -->
+            <div class="container mt-5" data-aos="fade-up" data-aos-delay="900">
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <i class="las la-code" style="font-size: 3rem; color: #FFD700;"></i>
+                        <h5 class="mt-3">Custom Web Development</h5>
+                        <p>Tailored solutions to bring your ideas to life.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <i class="las la-lightbulb" style="font-size: 3rem; color: #FFD700;"></i>
+                        <h5 class="mt-3">Innovative Solutions</h5>
+                        <p>Creative and efficient digital strategies.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <i class="las la-award" style="font-size: 3rem; color: #FFD700;"></i>
+                        <h5 class="mt-3">Proven Expertise</h5>
+                        <p>Years of experience delivering top-notch results.</p>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Social Media Links -->
+            <div class="social-links text-center mt-4" data-aos="fade-up" data-aos-delay="1000">
+                <a href="https://linkedin.com" class="me-3" target="_blank" style="color: #FFD700; font-size: 1.5rem;">
+                    <i class="lab la-linkedin"></i>
+                </a>
+                <a href="https://github.com" class="me-3" target="_blank" style="color: #FFD700; font-size: 1.5rem;">
+                    <i class="lab la-github"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" style="color: #FFD700; font-size: 1.5rem;">
+                    <i class="lab la-instagram"></i>
+                </a>
+            </div>
         </section>
+        
         <!-- //HOME -->
 
         <!-- SERVICES -->
@@ -335,89 +384,64 @@
         <!-- //ABOUT -->
 
         <!-- PRODUCTS-->
-        <section id="reviews" class="full-height px-lg-5">
+        <section id="products" class="full-height px-lg-5">
             <div class="container">
-
+                <!-- Introduction -->
                 <div class="row pb-4" data-aos="fade-up">
                     <div class="col-lg-8">
-                        <h1 class="text-brand">PRODUCTS</h1>
-                        <h6>E-commerce setup for Merchandise</h6>
+                        <h1 class="text-brand">Our Products</h1>
+                        <p class="text-muted">
+                            Explore our wide range of merchandise tailored to meet your needs. From energy drinks to premium
+                            merchandise, we offer quality products designed to enhance your lifestyle. Click the link below to
+                            browse and order your favorite items.
+                        </p>
                     </div>
                 </div>
-
+        
+                <!-- Highlighted Products -->
                 <div class="row gy-4">
-
                     <div class="col-md-4" data-aos="fade-up">
-
-                        <div class="review shadow-effect bg-base p-4 rounded-4">
-                            <div class="column left">
-                                <img src="assets/images/M.png" alt="">
+                        <div class="product-card shadow-effect bg-base p-4 rounded-4">
+                            <div class="image">
+                                <img src="assets/images/M.png" alt="Energy Drink">
                             </div>
-                            <div class="text-brand h5">
-                                <i class="las la-star"></i>
-                                <i class="las la-star"></i>
-                                <i class="las la-star"></i>
-                                <i class="las la-star"></i>
-                                <i class="las la-star"></i>
-                            </div>
-                            <p class="my-3">PRODUCT DESCRITION COMES HERE
-                            </p>
-                            <div class="person">
-                                <h5 class="mb-0">Energy Drink</h5>
-                                <p class="mb-0">View</p>
-                            </div>
+                            <h5 class="text-brand">Energy Drink</h5>
+                            <p class="my-3">Stay energized and refreshed with our premium energy drinks. Perfect for every
+                                moment.</p>
+                            <a href="assets/Products.html" class="btn btn-primary">Learn More</a>
                         </div>
-
                     </div>
-
+        
                     <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-
-                        <div class="review shadow-effect bg-base p-4 rounded-4">
-                            <div class="column left">
-                                <img src="assets/images/R.png" alt="">
+                        <div class="product-card shadow-effect bg-base p-4 rounded-4">
+                            <div class="image">
+                                <img src="assets/images/R.png" alt="Merry Cups">
                             </div>
-                            <div class="text-brand h5">
-                                <i class="las la-star"></i>
-                                <i class="las la-star"></i>
-                                <i class="las la-star"></i>
-                                <i class="las la-star"></i>
-                                <i class="las la-star"></i>
-                            </div>
-                            <p class="my-3">PRODUCT DESCRITION COMES HERE</p>
-                            <div class="person">
-                                <h5 class="mb-0">Merry Cups</h5>
-                                <p class="mb-0">View</p>
-                            </div>
+                            <h5 class="text-brand">Merry Cups</h5>
+                            <p class="my-3">Durable, stylish, and versatile cups designed to brighten your everyday.</p>
+                            <a href="assets/Products.html" class="btn btn-primary">Learn More</a>
                         </div>
-
                     </div>
-
+        
                     <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
-
-                        <div class="review shadow-effect bg-base p-4 rounded-4">
-                            <div class="column left">
-                                <img src="assets/images/M.png" alt="">
+                        <div class="product-card shadow-effect bg-base p-4 rounded-4">
+                            <div class="image">
+                                <img src="assets/images/M.png" alt="Energy Drink">
                             </div>
-                            <div class="text-brand h5">
-                                <i class="las la-star"></i>
-                                <i class="las la-star"></i>
-                                <i class="las la-star"></i>
-                                <i class="las la-star"></i>
-                                <i class="las la-star"></i>
-                            </div>
-                            <p class="my-3">PRODUCT DESCRITION COMES HERE</p>
-                            <div class="person">
-                                <h5 class="mb-0">Energy Drink</h5>
-                                <p class="mb-0">View</p>
-                            </div>
+                            <h5 class="text-brand">Energy Drink</h5>
+                            <p class="my-3">Replenish your energy with our exclusive energy drink line, crafted for excellence.</p>
+                            <a href="assets/Products.html" class="btn btn-primary">Learn More</a>
                         </div>
-
                     </div>
-                    <a href="assets/Products.html">VIEW ALL PRODUCTS</a>
                 </div>
-
+        
+                <!-- View All Products Link -->
+                <div class="text-center pt-5">
+                    <a href="assets/Products.html" class="btn btn-secondary btn-lg">View All Products</a>
+                </div>
             </div>
         </section>
+        
         <!-- //REVIEWS -->
 
         <!-- BLOG -->
@@ -543,6 +567,8 @@
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/aos.js"></script>
     <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/Scroll.js"></script>
+
 </body>
 
 </html>
