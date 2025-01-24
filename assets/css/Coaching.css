@@ -64,7 +64,7 @@ h1, h2, h3 {
 }
 
 .package-grid {
-    display: flexbox;
+    display: flex;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
 }
