@@ -1,0 +1,66 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styling */
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Video grid styling */
+.video-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Video item styling */
+.video-item {
+    width: 100%;
+    max-width: 560px;
+    text-align: center;
+}
+
+/* Video title styling */
+.video-item h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Channel link styling */
+.channel-link {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.channel-link a {
+    color: #e74c3c;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.channel-link a:hover {
+    text-decoration: underline;
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

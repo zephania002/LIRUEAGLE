@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIRU MASINDE</title>
+    <link rel="stylesheet" href="css/blog.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <!-- <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li> -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Blog Content -->
+    <div class="blog-container">
+        <!-- Blog Post 1 -->
+        <div class="blog-post">
+            <h2>My Latest Blogs</h2>
+            <div class="post-content">
+                <img src="images/profile_11.png" alt="Modern Design Trends" class="post-image">
+                <p>This year has seen the rise of bold colors, minimalistic designs and more user-centric.</p>
+            </div>
+
+            <!-- Comments Section -->
+            <div class="comments">
+                <h3>Comments</h3>
+                <div class="comment">
+                    <p><strong>Liru Masinde:</strong> With my work mate who became family.</p>
+                </div>
+                <div class="comment">
+                    <p><strong>Zephania:</strong> Great post! I think more color would be exciting too.</p>
+                </div>
+
+                <!-- Comment Form -->
+                <div class="comment-form">
+                    <input type="text" id="comment-input" placeholder="Add a comment..." />
+                    <button onclick="addComment()">Post Comment</button>
+                </div>
+            </div>
+        </div>
+
+         <!-- Blog Post 2-->
+         <div class="blog-post">
+            <h2></h2>
+            <div class="post-content">
+                <img src="images/profile_17.png" alt="Modern Design Trends" class="post-image">
+                <p>This year has seen the rise of bold colors, minimalistic designs and more user-centric.</p>
+            </div>
+
+            <!-- Comments Section -->
+            <div class="comments">
+                <h3>Comments</h3>
+                <div class="comment">
+                    <p><strong>Daisy Migoya:</strong> Looking lovely guys❤️❤️</p>
+                </div>
+                <div class="comment">
+                    <p><strong>Zadock Omollo:</strong> The end of a great time and the begining a new one👌</p>
+                </div>
+
+                <!-- Comment Form -->
+                <div class="comment-form">
+                    <input type="text" id="comment-input" placeholder="Add a comment..." />
+                    <button onclick="addComment()">Post Comment</button>
+                </div>
+            </div>
+        </div>
+        <!-- Add More Blog Posts here... -->
+    </div>
+
+    <script src="js/blog.js"></script>
+</body>
+</html>

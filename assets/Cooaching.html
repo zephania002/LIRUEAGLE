@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIRU MASINDE</title>
+    <link rel="stylesheet" href="css/Coaching.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1>Transform Your Life with Expert Coaching</h1>
+            <p>Unlock your full potential with personalized coaching sessions</p>
+            <a href="#booking" class="cta-btn">Book a Session</a>
+        </div>
+    </header>
+
+    <!-- About Coaching Section -->
+    <section class="about-coaching">
+        <h2>What is Coaching?</h2>
+        <p>Our coaching service is designed to help you achieve your personal and professional goals. Whether you're seeking career advice, life skills improvement, or personal growth, we offer tailored coaching to meet your needs.</p>
+    </section>
+
+    <!-- Coaching Packages -->
+    <section class="coaching-packages">
+        <h2>My Coaching Packages</h2>
+        <div class="package-grid">
+            <div class="package-card">
+                <h3>Basic Package</h3>
+                <p>1 Hour Session - KES 500</p>
+                <p>Perfect for those who need a quick boost in a specific area of their life.</p>
+                <a href="#booking" class="cta-btn">Book Now</a>
+            </div>
+            <div class="package-card">
+                <h3>Standard Package</h3>
+                <p>5 Hour Sessions - KES 2,000</p>
+                <p>Ideal for more comprehensive guidance on personal development or career growth.</p>
+                <a href="#booking" class="cta-btn">Book Now</a>
+            </div>
+            <div class="package-card">
+                <h3>Premium Package</h3>
+                <p>10 Hour Sessions - KES 4,000</p>
+                <p>A complete coaching experience for long-term change and deep personal growth.</p>
+                <a href="#booking" class="cta-btn">Book Now</a>
+            </div>
+            <div class="package-card">
+                <h3>Golden Package</h3>
+                <p>1 Year Subscription- KES 40,000</p>
+                <p>A complete coaching experience for one full Year with long-term change and deep personal growth.</p>
+                <a href="#booking" class="cta-btn">Book Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>My Client Testimonials</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial">
+                <p>"The coaching sessions helped me overcome my career doubts and made me feel more confident in my abilities!"</p>
+                <p>- Zephania Otieno</p>
+            </div>
+            <div class="testimonial">
+                <p>"I found the personal growth sessions transformative. Highly recommend!"</p>
+                <p>- Daisy Migoya</p>
+            </div>
+            <div class="testimonial">
+                <p>"The coaching sessions helped me overcome my career doubts and made me feel more confident in my abilities!"</p>
+                <p>- Zephania Otieno</p>
+            </div>
+            <div class="testimonial">
+                <p>"I found the personal growth sessions transformative. Highly recommend!"</p>
+                <p>- Daisy Migoya</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking">
+        <h2>Book Your Session</h2>
+        <p>Choose a package and schedule your session below:</p>
+        <form id="booking-form">
+            <label for="package">Select Package:</label>
+            <select id="package" name="package">
+                <option value="basic">Basic Package</option>
+                <option value="standard">Standard Package</option>
+                <option value="premium">Premium Package</option>
+                <option value="premium">Golden Package</option>
+            </select>
+            <label for="date">Choose Date and Time:</label>
+            <input type="datetime-local" id="date" name="date">
+            <input type="submit" value="Book Now">
+        </form>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <h2>Contact Me</h2>
+        <p>If you have any questions, feel free to reach out to us!</p>
+        <form id="contact-form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter Your Name eg. Zeph" required>
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter a Valid Email" required>
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <input type="submit"  value="Send Message">
+        </form>
+    </section>
+
+    <script src="js/Coaching.js"></script>
+</body>
+</html>

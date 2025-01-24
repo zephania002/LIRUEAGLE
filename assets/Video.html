@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIRU MASINDE</title>
+    <link rel="stylesheet" href="css/Video.css">
+    
+</head>
+<body>
+    <!-- Header Section (optional) -->
+    <header>
+        <h1>Video Gallery</h1>
+        <p>CLICK TO VIEW</p>
+    </header>
+
+    <!-- Video Grid -->
+    <div class="video-grid">
+        <!-- Video 1 -->
+        <div class="video-item" onclick="openModal('video1')">
+            <img src="images/thumbnail.jpg" alt="Video 1" class="video-thumbnail">
+            <h3>COMING SOON...</h3>
+        </div>
+        <!-- Video 2 -->
+        <div class="video-item" onclick="openModal('video2')">
+            <img src="images/thumbnail.jpg" alt="Video 2" class="video-thumbnail">
+            <h3>COMING SOON...</h3>
+        </div>
+        <!-- Video 3 -->
+        <div class="video-item" onclick="openModal('video3')">
+            <img src="images/thumbnail.jpg" alt="Video 3" class="video-thumbnail">
+            <h3>COMING SOON...</h3>
+        </div>
+        <!-- Video 4 -->
+        <div class="video-item" onclick="openModal('video4')">
+            <img src="images/thumbnail.jpg" alt="Video 4" class="video-thumbnail">
+            <h3>COMING SOON...</h3>
+        </div>
+        <!-- Video 5 -->
+        <div class="video-item" onclick="openModal('video5')">
+            <img src="images/thumbnail.jpg" alt="Video 5" class="video-thumbnail">
+            <h3>COMING SOON...</h3>
+        </div>
+        <!-- Video 6 -->
+        <div class="video-item" onclick="openModal('video6')">
+            <img src="images/thumbnail.jpg" alt="Video 6" class="video-thumbnail">
+            <h3>COMING SOON...</h3>
+        </div>
+        <!-- Video 7 -->
+        <div class="video-item" onclick="openModal('video7')">
+            <img src="images/thumbnail.jpg" alt="Video 7" class="video-thumbnail">
+            <h3>COMING SOON...</h3>
+        </div>
+        <!-- Add more videos here as needed -->
+    </div>
+
+    <!-- Video Modal -->
+<div id="video-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <video id="modal-video" controls>
+            <source id="video-source" src="" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
+
+<!-- Home Button at the Bottom -->
+<!-- Home Link at the Bottom -->
+<a href="/index.html" class="home-link">Home</a>
+
+<script src="js/Video.js"></script>
+</body>
+</html>
