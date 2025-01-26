@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .container h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .container p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .time-box {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid white;
+            border-radius: 10px;
+            padding: 1rem;
+            text-align: center;
+            width: 80px;
+        }
+
+        .time-box span {
+            display: block;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        .time-box small {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+
+        .subscribe {
+            margin-top: 2rem;
+        }
+
+        .subscribe input[type="email"] {
+            padding: 0.8rem;
+            border: none;
+            border-radius: 5px;
+            margin-right: 1rem;
+            width: 250px;
+        }
+
+        .subscribe button {
+            padding: 0.8rem 1.5rem;
+            background-color: #ff5733;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .subscribe button:hover {
+            background-color: #e8431e;
+        }
+
+        footer {
+            margin-top: 2rem;
+            font-size: 0.8rem;
+            color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Coming Soon!</h1>
+        <p>Our event is almost here. Stay tuned!</p>
+        <div class="countdown" id="countdown">
+            <div class="time-box">
+                <span id="days">00</span>
+                <small>Days</small>
+            </div>
+            <div class="time-box">
+                <span id="hours">00</span>
+                <small>Hours</small>
+            </div>
+            <div class="time-box">
+                <span id="minutes">00</span>
+                <small>Minutes</small>
+            </div>
+            <div class="time-box">
+                <span id="seconds">00</span>
+                <small>Seconds</small>
+            </div>
+        </div>
+        <div class="subscribe">
+            <input type="email" placeholder="Enter your email to stay updated">
+            <button>Notify Me</button>
+        </div>
+        <footer>&copy; 2025 Your Website Name</footer>
+    </div>
+
+    <script>
+        const countdown = document.getElementById('countdown');
+
+// Set the event date to one year from now
+const eventDate = new Date();
+eventDate.setFullYear(eventDate.getFullYear() + 1);
+
+function updateCountdown() {
+    const now = new Date();
+    const diff = eventDate - now;
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    document.getElementById('days').innerText = days;
+    document.getElementById('hours').innerText = hours;
+    document.getElementById('minutes').innerText = minutes;
+    document.getElementById('seconds').innerText = seconds;
+}
+
+// Update the countdown every second
+setInterval(updateCountdown, 1000);
+
+    </script>
+</body>
+</html>
