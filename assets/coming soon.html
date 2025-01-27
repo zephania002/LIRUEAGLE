@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon</title>
+    <title>LIRU MASINDE</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
     <style>
@@ -127,15 +127,33 @@
     </div>
 
     <script>
-        const countdown = document.getElementById('countdown');
+const countdown = document.getElementById('countdown');
 
-// Set the event date to one year from now
-const eventDate = new Date();
-eventDate.setFullYear(eventDate.getFullYear() + 1);
+// Check if an event date exists in localStorage
+let eventDate = localStorage.getItem('eventDate');
+if (!eventDate) {
+    // If not, set the event date to one year from now and save it in localStorage
+    eventDate = new Date();
+    eventDate.setFullYear(eventDate.getFullYear() + 1);
+    localStorage.setItem('eventDate', eventDate);
+} else {
+    // Convert the stored string back to a Date object
+    eventDate = new Date(eventDate);
+}
 
 function updateCountdown() {
     const now = new Date();
     const diff = eventDate - now;
+
+    if (diff <= 0) {
+        // If the countdown is complete, display a message
+        document.getElementById('days').innerText = '0';
+        document.getElementById('hours').innerText = '0';
+        document.getElementById('minutes').innerText = '0';
+        document.getElementById('seconds').innerText = '0';
+        clearInterval(interval); // Stop the timer
+        return;
+    }
 
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
     const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
@@ -149,7 +167,8 @@ function updateCountdown() {
 }
 
 // Update the countdown every second
-setInterval(updateCountdown, 1000);
+const interval = setInterval(updateCountdown, 1000);
+
 
     </script>
 </body>
